@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+   
+    <link rel="stylesheet" href="/static/application-form.component.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body >
+
+    <div class="container">
+        <div class="title">Creditpro - AI Powered credit issuance system</div>
+        <div class="content" >
+            <form action="{{ url_for("predict")}}" method="POST">
+                <div class="user-details" style="background: transparent;">
+                    
+                    <div class="input-box" style="background: transparent;">
+                        <span class="details">Own'car
+                        </span>
+                        <!-- <label for="cars">Choose your Option:</label> -->
+                        <select name="cars" id="cars" placeholder="YES or NO" style="width: 100%; height: 75%; border-radius: 1.5mm;">
+                            <option value="-1">Choose your Option:</option>
+                            <option value="1">YES</option>
+                            <option value="0">NO</option>   
+                        </select>
+                        <!-- <input type="text" placeholder="YES or NO" required> -->
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Own's Home</span>
+                        <!-- <label for="cars">Choose your Option:</label> -->
+                        <select name="home" id="home" placeholder="YES or NO" style="width: 100%; height: 75%; border-radius: 1.5mm;">
+                            <option value="-1">Choose your Option:</option>
+                            <option value="1">YES</option>
+                            <option value="0">NO</option>    
+                        </select>
+                        <!-- <input type="text" placeholder="YES or NO" required> -->
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">No of children</span>
+                        <input type="number" name="cntChild" placeholder="Please enter No of children" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Income Type</span>
+                        <select name="IncomeType" id="IncomeType" placeholder="Select a option" style="width: 100%; height: 75%; border-radius: 1.5mm;">
+                            <option value="-1" selected>Choose your Option</option>
+                                <option value="0">Commercial associate</option>
+                                <option value="1">Pensioner</option>
+                                <option value="2">State servant </option>
+                                <option value="3">Student </option>
+                                <option value="4">Working </option>
+                        </select>
+                        <!-- <input type="number" placeholder="Please enter INCOME_TYPE" required> -->
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Education Type</span>
+                        <select name="educationType" id="educationType" placeholder="Select a option"
+                            style="width: 100%; height: 75%; border-radius: 1.5mm;">
+                            <option value="-1" selected>Choose your Option</option>
+                            <option value="0">Academic degree</option>
+                            <option value="1">Higher education</option>
+                            <option value="2">Incomplete higher</option>
+                            <option value="3">Lower secondary </option>
+                            <option value="4">Secondary / secondary special </option>
+                        </select>
+                        <!-- <input type="number" placeholder="Please enter INCOME_TYPE" required> -->
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Total Income</span>
+                        <input type="number" name="income" placeholder="Enter Total Income" required>
+                    </div>
+                    <!-- <div class="input-box">
+                        <span class="details">Education Type
+                        </span>
+                        <input type="number" placeholder="Enter Education Type
+                        " required>
+                    </div> -->
+
+                    <div class="input-box">
+                        <span class="details">Family Status</span>
+                        <select name="familyStatus" id="familyStatus" placeholder="Select a Option" style="width: 100%; height: 75%; border-radius: 1.5mm;">
+                            <option value="-1" selected>Choose your Option</option>
+                            <option value="0">Civil marriage</option>
+                            <option value="1">Married</option>
+                            <option value="2">Separated</option>
+                            <option value="3">Single / not married </option>
+                            <option value="4">Widow </option>
+                        </select>
+                        <!-- <input type="number" placeholder="Please enter INCOME_TYPE" required> -->
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Family Members</span>
+                        <input type="number" name="cntMem" placeholder="Enter no. Family Members" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Housing Type</span>
+                        <select name="housingType" id="housingType" placeholder="Select a option" style="width: 100%; height: 75%; border-radius: 1.5mm;">
+                            <option value="-1" selected>Choose your Option</option>
+                            <option value="0">Co-op apartment</option>
+                            <option value="1">House / apartment</option>
+                            <option value="2">Muncipal apartment </option>
+                            <option value="3">Office apartment </option>
+                            <option value="4">Rented apartment </option>
+                            <option value="5">with parents </option>
+                        </select>
+                        <!-- <input type="number" placeholder="Please enter INCOME_TYPE" required> -->
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Age</span>
+                        <input type="number" name="age" placeholder="Enter your Age" required>
+                    </div>
+
+                    <div class="input-box" style="background: transparent;">
+                        <span class="details">Gender</span>
+                        <!-- <label for="cars">Choose your Option:</label> -->
+                        <select name="gender" id="gender" placeholder="Select a option" style=" height: 75%; border-radius: 1.5mm;">
+                            <option value="-1">Choose your Option:</option>
+                            <option value="1">Male</option>
+                            <option value="0">Female</option>
+                        </select>
+                        <!-- <input type="text" placeholder="YES or NO" required> -->
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Years Employed</span>
+                        <input type="number" name="yearsEmployed" placeholder="Total No Of Years Employed" required>
+                    </div>
+                </div>
+                
+                
+                <div class="button">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
